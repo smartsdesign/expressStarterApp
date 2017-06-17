@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www",
+    "update": "npm install && docker run -it -v $(pwd):/var/www -p 8080:3000 samsonmuhangi/node"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -13,5 +14,8 @@
     "hbs": "~4.0.1",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
