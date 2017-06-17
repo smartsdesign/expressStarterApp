@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "update": "npm install && docker run -it -v $(pwd):/var/www -p 8080:3000 samsonmuhangi/node"
+    "update": "npm install && docker pull samsonmuhangi/node && docker run -it -v $(pwd):/var/www -p 8080:3000 samsonmuhangi/node"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
